@@ -1,0 +1,133 @@
+module KS32 (
+    input  [31:0] x, y,
+    input cin,
+    output [31:0] sum,
+    output cout
+    //output[15:0] G5o
+);
+
+// Step 1: Generate & Propagate
+wire [31:0] G, P;
+
+genvar i;
+
+generate
+for(i=0; i<32; i=i+1) begin : and_xor
+initialize ini(x[i],y[i],G[i],P[i]);
+end
+endgenerate
+
+// Step 2: Stage 1 (distance = 1)
+wire [31:0] G1, P1;
+
+
+grey_cell b1(G[0],P[0],cin,G1[0]);
+
+generate
+for(i=0; i<31; i=i+1) begin : stage_1
+black_cell b(G[i+1],P[i+1],G[i],P[i],G1[i+1],P1[i+1]);
+end
+endgenerate
+
+// Step 3: Stage 2 (distance = 2)
+wire [30:0] G2, P2;
+
+grey_cell b2(G1[1],P1[1],cin,G2[0]);
+grey_cell b3(G1[2],P1[2],G1[0],G2[1]);
+
+generate
+for(i=0; i<30; i=i+1) begin : stage_2
+black_cell b(G1[i+2],P1[i+2],G1[i],P1[i],G2[i+1],P2[i+1]);
+end
+endgenerate
+
+// Step 4: Stage 3 (distance = 4)
+
+wire [28:0] G3, P3;
+
+grey_cell b4(G2[2],P2[2],cin,G3[0]);
+grey_cell b5(G2[3],P2[3],G1[0],G3[1]);
+grey_cell b6(G2[4],P2[4],G2[0],G3[2]);
+grey_cell b7(G2[5],P2[5],G2[1],G3[3]);
+
+generate
+for(i=0; i<27; i=i+1) begin : stage_3
+black_cell b(G2[i+4],P2[i+4],G2[i],P2[i],G3[i+2],P3[i+2]);
+end
+endgenerate
+
+//Step 5: Stage 4 (distance = 8)
+wire [24:0] G4, P4;
+
+grey_cell b8(G3[4],P3[4],cin,G4[0]);
+grey_cell b9(G3[5],P3[5],G1[0],G4[1]);
+grey_cell b10(G3[6],P3[6],G2[0],G4[2]);
+grey_cell b11(G3[7],P3[7],G2[1],G4[3]);
+grey_cell b12(G3[8],P3[8],G3[0],G4[4]);
+grey_cell b13(G3[9],P3[9],G3[1],G4[5]);
+grey_cell b14(G3[10],P3[10],G3[2],G4[6]);
+grey_cell b15(G3[11],P3[11],G3[3],G4[7]);
+
+generate
+for(i=0; i<21; i=i+1) begin : stage_4
+black_cell b(G3[i+8],P3[i+8],G3[i],P3[i],G4[i+4],P4[i+4]);
+end
+endgenerate
+
+// Step 6: Stage 5 (distance = 16)
+
+wire [15:0] G5;
+grey_cell b16(G4[8],P4[8],cin,G5[0]);
+grey_cell b17(G4[9],P4[9],G1[0],G5[1]);
+grey_cell b18(G4[10],P4[10],G2[0],G5[2]);
+grey_cell b19(G4[11],P4[11],G2[1],G5[3]);
+grey_cell b20(G4[12],P4[12],G3[0],G5[4]);
+grey_cell b21(G4[13],P4[13],G3[1],G5[5]);
+grey_cell b22(G4[14],P4[14],G3[2],G5[6]);
+grey_cell b23(G4[15],P4[15],G3[3],G5[7]);
+grey_cell b24(G4[16],P4[16],G4[0],G5[8]);
+grey_cell b25(G4[17],P4[17],G4[1],G5[9]);
+grey_cell b26(G4[18],P4[18],G4[2],G5[10]);
+grey_cell b27(G4[19],P4[19],G4[3],G5[11]);
+grey_cell b28(G4[20],P4[20],G4[4],G5[12]);
+grey_cell b29(G4[21],P4[21],G4[5],G5[13]);
+grey_cell b30(G4[22],P4[22],G4[6],G5[14]);
+grey_cell b31(G4[23],P4[23],G4[7],G5[15]);
+grey_cell b32(G4[24],P4[24],G4[8],cout);    
+//assign G5o=G5;
+// Step 6: Sum
+xor(sum[0], P[0], cin);
+xor(sum[1], P[1], G1[0]);   
+xor(sum[2], P[2], G2[0]);
+xor(sum[3], P[3], G2[1]);
+xor(sum[4], P[4], G3[0]);
+xor(sum[5], P[5], G3[1]);
+xor(sum[6], P[6], G3[2]);
+xor(sum[7], P[7], G3[3]);
+xor(sum[8], P[8], G4[0]);
+xor(sum[9], P[9], G4[1]);
+xor(sum[10], P[10], G4[2]);
+xor(sum[12], P[12], G4[3]);
+xor(sum[11], P[11], G4[4]);
+xor(sum[13], P[13], G4[5]);
+xor(sum[14], P[14], G4[6]);
+xor(sum[15], P[15], G4[7]);
+xor(sum[16], P[16], G5[0]);
+xor(sum[17], P[17], G5[1]);
+xor(sum[18], P[18], G5[2]);
+xor(sum[19], P[19], G5[3]);
+xor(sum[20], P[20], G5[4]);
+xor(sum[21], P[21], G5[5]);
+xor(sum[22], P[22], G5[6]);
+xor(sum[23], P[23], G5[7]);
+xor(sum[24], P[24], G5[8]);
+xor(sum[25], P[25], G5[9]);
+xor(sum[26], P[26], G5[10]);
+xor(sum[27], P[27], G5[11]);
+xor(sum[28], P[28], G5[12]);
+xor(sum[29], P[29], G5[13]);
+xor(sum[30], P[30], G5[14]);
+xor(sum[31], P[31], G5[15]);
+
+
+endmodule

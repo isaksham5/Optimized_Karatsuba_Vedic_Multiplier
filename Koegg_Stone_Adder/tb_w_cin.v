@@ -1,12 +1,12 @@
 
-module tb;
+module tb_w_cin;
 
 reg [3:0] x, y;
 reg cin;
 wire [3:0] sum;
 wire cout;
 
-KS4_w_cin uut(x, y, cin, sum, cout);
+KS4_1 uut(x, y, cin, sum, cout);
 
 initial begin
     repeat (10) begin
