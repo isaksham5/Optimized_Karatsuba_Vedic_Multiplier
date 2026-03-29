@@ -1,0 +1,7 @@
+module full_adder (
+    input A, B, Cin,
+    output sum, cout
+);
+    assign Sum = A ^ B ^ Cin;
+    assign Cout = (A & B) | (Cin & (A ^B));
+endmodule

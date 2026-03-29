@@ -1,0 +1,22 @@
+{C:/intelFPGA/25BVD0098_Rishabh Gupta/work/vedic2x2.v} {1 {vlog -work work -stats=none {C:/intelFPGA/25BVD0098_Rishabh Gupta/work/vedic2x2.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module vedic_2x2
+
+Top level modules:
+	vedic_2x2
+
+} {} {}} {C:/intelFPGA/25BVD0098_Rishabh Gupta/work/vedic4x4.v} {1 {vlog -work work -stats=none {C:/intelFPGA/25BVD0098_Rishabh Gupta/work/vedic4x4.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module vedic_multiplier_4bit
+
+Top level modules:
+	vedic_multiplier_4bit
+
+} {} {}} {C:/intelFPGA/25BVD0098_Rishabh Gupta/work/vedic_tb.v} {1 {vlog -work work -stats=none {C:/intelFPGA/25BVD0098_Rishabh Gupta/work/vedic_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_vedic_multiplier_4bit
+
+Top level modules:
+	tb_vedic_multiplier_4bit
+
+} {} {}}
