@@ -1,9 +1,0 @@
-module half_adder (
-    input A,
-    input B,
-    output Sum,
-    output Cout
-);
-    assign Sum = A ^ B;      // XOR operation for Sum
-    assign Cout = A &B ;    // AND operation for Carry
-endmodule
