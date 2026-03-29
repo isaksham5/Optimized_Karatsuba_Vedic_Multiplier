@@ -1,0 +1,15 @@
+module Kogge_Stone_8(x,y,cin,sum,cout);
+input [7:0] x,y;
+output [7:0] sum;
+input cin;
+output cout;
+
+genvar i;
+
+generate
+for(i=0;i=i+1;i<8) begin : and_xor
+initialize ini(x[i],y[i],G_A[i],P_A[i]);
+end
+endgenerate
+
+
