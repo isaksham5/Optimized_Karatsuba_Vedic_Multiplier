@@ -28,12 +28,6 @@ wire [1:0] G2, P2;
 grey_cell b3(G1[1],P1[1],G1[0],G2[0]);
 grey_cell b4(G1[2],P1[2],G1[1],G2[1]);
 
-// Step 4: Carry computation
-wire c0, c1, c2, c3;
-
-assign c1 = G[0] ;
-assign c2 = G1[0];
-assign c3 = G2[0];
 assign cout = G2[1];
 
 // Step 5: Sum

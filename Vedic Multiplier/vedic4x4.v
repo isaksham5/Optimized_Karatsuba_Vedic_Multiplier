@@ -34,8 +34,9 @@ assign P[4] = s41;
 
 // Weight-5
 wire s50, c50, s51, c51;
-full_adder FA_w5a (.A(Q1[3]), .B(Q2[3]), .Cin(Q3[2]), .Sum(s50), .Cout(c50full_adder FA_w5b (.A(s50), .B(c40), .Cin(c41), .Sum(s51), .Cout(c51));
+full_adder FA_w5a (.A(Q1[3]), .B(Q2[3]), .Cin(Q3[2]), .Sum(s50), .Cout(c50));
 full_adder FA_w5b (.A(s50), .B(c40), .Cin(c41), .Sum(s51), .Cout(c51));
+
 assign P[5] = s51;
 
 // Weight-6

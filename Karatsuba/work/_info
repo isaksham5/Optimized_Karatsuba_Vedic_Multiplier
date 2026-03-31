@@ -1,0 +1,564 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dS:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder
+vblack_cell
+Z0 !s110 1774931895
+!i10b 1
+!s100 kDgAeQFl=I^f8i0OoTlHj0
+IlMAaP8hfZJcDIDQaUmcD<2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dS:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba
+w1774770192
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/black_cell.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/black_cell.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1774931895.000000
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/black_cell.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/black_cell.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vFA
+Z7 !s110 1774931894
+!i10b 1
+!s100 <ZeM0W^FPbKnnPi=W@Tb82
+ILHYme=oaJnKiIYTgGYRf22
+R1
+R2
+w1774863046
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/FA.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/FA.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z8 !s108 1774931894.000000
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/FA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/FA.v|
+!i113 1
+R5
+R6
+n@f@a
+vfull_adder
+R7
+!i10b 1
+!s100 3m1X92M<b2=0_c]HV7g]H3
+I<l27HgEUfW?TJO<z^Z<0E3
+R1
+R2
+Z9 w1774816580
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/full_adder.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/full_adder.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/full_adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/full_adder.v|
+!i113 1
+R5
+R6
+vgrey_cell
+R0
+!i10b 1
+!s100 3h3B1TiNaCKY6[fI3LYKf3
+IN;RRhM5bageZ59?`oFH:J0
+R1
+R2
+w1774770194
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/grey_cell.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/grey_cell.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/grey_cell.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/grey_cell.v|
+!i113 1
+R5
+R6
+vHA
+R7
+!i10b 1
+!s100 M>i[F<9_WEC7dWmeRUaa33
+IXlYGmf[e@^Q6`]ez2^RI<2
+R1
+R2
+w1774865299
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/HA.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/HA.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/HA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/HA.v|
+!i113 1
+R5
+R6
+n@h@a
+vhalf_adder
+R7
+!i10b 1
+!s100 Hh[XjP]aEc9b92:zTJPhb2
+IT;3Mj6gb^<5m0]MQWYje=0
+R1
+R2
+R9
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/half_adder.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/half_adder.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/half_adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/half_adder.v|
+!i113 1
+R5
+R6
+vinitialize
+R0
+!i10b 1
+!s100 SoiZb5QJY<N1RL_2O_9<n3
+Ik:TKo2f9Nma<oMCOZb[_f2
+R1
+R2
+w1774782798
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/initialize.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/initialize.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/initialize.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/initialize.v|
+!i113 1
+R5
+R6
+vkaratsuba_2bit_struct
+!s110 1774865615
+!i10b 1
+!s100 70XMQMhR9?_dz<[l:@cJT1
+Infz=n7JIlCBIlRQN2;Rh51
+R1
+R2
+w1774865556
+Z10 8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/2x2_Karatsuba.v
+Z11 FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/2x2_Karatsuba.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1774865615.000000
+Z12 !s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/2x2_Karatsuba.v|
+Z13 !s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/2x2_Karatsuba.v|
+!i113 1
+R5
+R6
+vkaratsuba_2x2
+!s110 1774865394
+!i10b 1
+!s100 YTQL0TSO`:LS4KmTTCElf3
+IZn0oZ@EWGi21SRb15kJV@3
+R1
+R2
+w1774856333
+R10
+R11
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1774865394.000000
+R12
+R13
+!i113 1
+R5
+R6
+vkaratsuba_2x2_struct
+R7
+!i10b 1
+!s100 Nk4_`UEiLMSeaQ<1a3za=3
+I343XhzP8fC[oHj0Wi?bFb2
+R1
+R2
+w1774866208
+R10
+R11
+L0 38
+R3
+r1
+!s85 0
+31
+R8
+R12
+R13
+!i113 1
+R5
+R6
+vkaratsuba_4x4_struct
+R0
+!i10b 1
+!s100 NiilJ=I3dUOi8kZzzQZno3
+Ik38KM4a_OI<8O2Tk9hk3A1
+R1
+R2
+w1774893442
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/4x4_Karatsuba.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/4x4_Karatsuba.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/4x4_Karatsuba.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/4x4_Karatsuba.v|
+!i113 1
+R5
+R6
+vkaratsuba_8bit
+R0
+!i10b 1
+!s100 lEMk25]`>=[eOk9T:>NCA0
+I6Hb;V42M3JjX4?U@lmnFk2
+R1
+R2
+w1774931890
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/8x8_Karatsuba.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/8x8_Karatsuba.v
+L0 39
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/8x8_Karatsuba.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/8x8_Karatsuba.v|
+!i113 1
+R5
+R6
+vKS16
+Z14 !s110 1774931896
+!i10b 1
+!s100 5?FZH?:Q_5Alk=J=W9c6S0
+I?ejh<Xf]oS<I=nOz2m2fT0
+R1
+R2
+w1774813626
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS16.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS16.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z15 !s108 1774931896.000000
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS16.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS16.v|
+!i113 1
+R5
+R6
+n@k@s16
+vKS32
+R14
+!i10b 1
+!s100 Y_OXUh]e?UhkDA]FBd<ZA1
+ITSE_DJH=^?hhjN]mlfB>]2
+R1
+R2
+w1774816431
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS32.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS32.v
+L0 1
+R3
+r1
+!s85 0
+31
+R15
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS32.v|
+!i113 1
+R5
+R6
+n@k@s32
+vKS4
+R0
+!i10b 1
+!s100 ZB;CHz^l?X4QB>UL_9aVl1
+IOKn<jQ``TI=jKL98[2dlm3
+R1
+R2
+w1774868172
+Z16 8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS4_1.v
+Z17 FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS4_1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+Z18 !s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS4_1.v|
+Z19 !s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/KS4_1.v|
+!i113 1
+R5
+R6
+n@k@s4
+vKS4_1
+!s110 1774868120
+!i10b 1
+!s100 cm6@OadzYiekaBe8RmRR_0
+I31gVCY6J?DI`XIB1[@Sb:0
+R1
+R2
+w1774867751
+R16
+R17
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1774868120.000000
+R18
+R19
+!i113 1
+R5
+R6
+n@k@s4_1
+vmod_KS8
+R14
+!i10b 1
+!s100 bo38;ffF>]@hThe`;i;1=1
+IhBAOR[alfgWdl>k3b0;Ab0
+R1
+R2
+w1774809818
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/Modified_KS8.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/Modified_KS8.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/Modified_KS8.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/Modified_KS8.v|
+!i113 1
+R5
+R6
+nmod_@k@s8
+vtb
+R0
+!i10b 1
+!s100 91R6YeLH<edOjZX7L=Q8W1
+I?iIYOb1Th_jhnTM=<nT[k3
+R1
+R2
+w1774868115
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Koegg_Stone_Adder/tb.v|
+!i113 1
+R5
+R6
+vtb_2x2
+R7
+!i10b 1
+!s100 fWo[02e=b7G2[kgLRQO@V3
+ISi?aLUXL@=HSa_6ZP5kC=3
+R1
+R2
+w1774866220
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/2x2_tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/2x2_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/2x2_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/2x2_tb.v|
+!i113 1
+R5
+R6
+vtb_4x4
+R0
+!i10b 1
+!s100 2cklH2HCDFS<?UkD:=?SS2
+IXUhHLR2ZI;MT8=oN99>Kj0
+R1
+R2
+w1774866901
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/4x4tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/4x4tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/4x4tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/4x4tb.v|
+!i113 1
+R5
+R6
+vtb_ks4
+R0
+!i10b 1
+!s100 =Vj=IidiJZ9`oP@n1>]_z1
+IXR]jzNmjUcFP`G]WeM`K50
+R1
+R2
+w1774874964
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/tb_test.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/tb_test.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/tb_test.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/tb_test.v|
+!i113 1
+R5
+R6
+vtb_vedic_4x4
+R0
+!i10b 1
+!s100 Ab5Cf7><5HG3EhGYRLFN32
+I2O;<[OeRiIO2F0TWN2:0B0
+R1
+R2
+w1774892608
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/vedic4x4tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/vedic4x4tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/vedic4x4tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/vedic4x4tb.v|
+!i113 1
+R5
+R6
+vtb_vedic_multiplier_4bit
+R7
+!i10b 1
+!s100 TmA44PimD7l[EjXdFP5j=1
+I9X2HI2d23>S`mERiam6m<0
+R1
+R2
+R9
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic_tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic_tb.v|
+!i113 1
+R5
+R6
+vvedic_2x2
+R7
+!i10b 1
+!s100 obgc@nkkOi5Z<DAi6XA9T2
+Iobc@`YWA]LWK;6QBQkMYY2
+R1
+R2
+R9
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic2x2.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic2x2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic2x2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic2x2.v|
+!i113 1
+R5
+R6
+vVedic_4x4
+R0
+!i10b 1
+!s100 90K0XCaf4j8kk5>OkjJX43
+IHzQg_F7ZaGC[Dak<Q=`mG3
+R1
+R2
+w1774888266
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/Vedic_4x4.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/Vedic_4x4.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/Vedic_4x4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Karatsuba/Vedic_4x4.v|
+!i113 1
+R5
+R6
+n@vedic_4x4
+vvedic_multiplier_4bit
+R7
+!i10b 1
+!s100 BkWJ;Tj[a1Uz;1zoO`hmA3
+I7bDDAWWPQ]eZB8aO<cT@F0
+R1
+R2
+w1774866938
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic4x4.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic4x4.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic4x4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Vedic Multiplier/vedic4x4.v|
+!i113 1
+R5
+R6
