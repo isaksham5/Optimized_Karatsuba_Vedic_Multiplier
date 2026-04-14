@@ -1,0 +1,114 @@
+module tb_VM128;
+
+    reg  [127:0] x, y;
+    wire [255:0] prod;
+
+    wire [255:0] expected;
+    assign expected = x * y;
+
+    VM128 dut(x, y, prod);
+
+    integer errors = 0;
+    integer tests  = 0;
+
+    task check;
+        input [127:0] a, b;
+        begin
+            x = a; y = b;
+            #20;
+            tests = tests + 1;
+            if (prod !== expected) begin
+                $display("ERROR: A=%0d B=%0d -> P=%0d Expected=%0d", a, b, prod, expected);
+                errors = errors + 1;
+            end
+        end
+    endtask
+
+    integer i;integer j;
+
+    initial begin
+        $display("=== VM128 Testbench ===");
+        errors = 0; tests = 0;
+        x = 0; y = 0;
+        #10;
+
+        $display("-- Corner Cases --");
+        check(0, 0);
+        check(1, 0);
+        check(0, 1);
+        check(1, 1);
+        check(128'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF, 1);
+        check(1, 128'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF);
+        check(128'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,
+              128'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF);
+        check(128'hFFFFFFFFFFFFFFFF0000000000000000,
+              128'hFFFFFFFFFFFFFFFF0000000000000000);
+        check(128'h0000000000000000FFFFFFFFFFFFFFFF,
+              128'h0000000000000000FFFFFFFFFFFFFFFF);
+        check(128'hFFFFFFFFFFFFFFFF0000000000000000,
+              128'h0000000000000000FFFFFFFFFFFFFFFF);
+        check(128'hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,
+              128'h55555555555555555555555555555555);
+        check(128'h55555555555555555555555555555555,
+              128'hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA);
+        check(128'hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,
+              128'hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA);
+        check(128'h55555555555555555555555555555555,
+              128'h55555555555555555555555555555555);
+
+        $display("-- Powers of 2 --");
+        for (i = 0; i < 128; i = i + 1) begin
+            check(128'h1 << i, 1);
+            check(1, 128'h1 << i);
+            check(128'h1 << i, 128'h1 << i);
+        end
+
+        $display("-- Boundary: 64-bit split points --");
+        check(128'h00000000000000010000000000000000,
+              128'h00000000000000010000000000000000);
+        check(128'hFFFFFFFFFFFFFFFF0000000000000000,
+              128'h00000000000000010000000000000000);
+        check(128'h0000000000000000FFFFFFFFFFFFFFFF,
+              128'h00000000000000010000000000000000);
+        check(128'h00000000000000010000000000000000,
+              128'hFFFFFFFFFFFFFFFF0000000000000000);
+        check(128'h00000000000000010000000000000000,
+              128'h0000000000000000FFFFFFFFFFFFFFFF);
+        check(128'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,
+              128'h00000000000000010000000000000000);
+        check(128'h00000000000000010000000000000000,
+              128'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF);
+
+        $display("-- Boundary: 32-bit split points --");
+        check(128'h000000010000000000000000000000000, 
+              128'h00000001000000000000000000000000);
+        check(128'h0000000000000000FFFFFFFF00000000,
+              128'h0000000000000000FFFFFFFF00000000);
+        check(128'h000000000000000000000000FFFFFFFF,
+              128'h000000000000000000000000FFFFFFFF);
+
+        $display("-- Small exhaustive (0..255 x 0..255) --");
+        for (i = 0; i < 256; i = i + 1) begin
+            
+            for (j = 0; j < 256; j = j + 1)
+                check(i, j);
+        end
+
+        $display("-- Random Tests (10000) --");
+        repeat (10000)
+            check({$random,$random,$random,$random},
+                  {$random,$random,$random,$random});
+
+        $display("==============================");
+        $display("Total tests : %0d", tests);
+        $display("Errors      : %0d", errors);
+        if (errors == 0)
+            $display("ALL TESTS PASSED");
+        else
+            $display("FAILURES DETECTED");
+        $display("==============================");
+
+        $finish;
+    end
+
+endmodule

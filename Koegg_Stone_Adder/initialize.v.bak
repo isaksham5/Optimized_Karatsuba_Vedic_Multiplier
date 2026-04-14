@@ -1,0 +1,17 @@
+module initialize(x,y,cin,g,p);
+input x,y,cin;
+output g,p;
+
+wire w,p_temp,g_temp;
+
+xor(p_temp,x,y);//p_temp=x^y
+
+and(g_temp,x,y);//g_temp=x*y
+
+and(w,p_temp,cin);//w=(x^y)*cin
+
+or(g,w,g_temp);//g=x*y+(x^y)*cin
+
+assign p=p_temp;
+
+endmodule

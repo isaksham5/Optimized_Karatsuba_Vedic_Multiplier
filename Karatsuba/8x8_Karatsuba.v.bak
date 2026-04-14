@@ -1,0 +1,182 @@
+// ============================================================
+//  8-bit Karatsuba Multiplier
+//
+//  Sub-modules instantiated:
+//    karatsuba_4bit  (A[3:0], B[3:0]  ? P[7:0])
+//    karatsuba_2bit  (A[1:0], B[1:0]  ? P[3:0])
+//    KSA_8           (A[7:0], B[7:0], Cin ? S[7:0], Cout)
+//    KSA_16          (A[15:0], B[15:0], Cin ? S[15:0], Cout)
+//
+//  Algorithm ? two Karatsuba levels:
+//
+//  LEVEL 1  (8-bit input split into 4-bit halves)
+//  -----------------------------------------------
+//    AH = A[7:4],  AL = A[3:0]
+//    BH = B[7:4],  BL = B[3:0]
+//
+//    Z0     = AL × BL                              [karatsuba_4bit ? 8b]
+//    Z2     = AH × BH                              [karatsuba_4bit ? 8b]
+//    sA     = AH + AL  (5-bit, max 30)             [KSA_8]
+//    sB     = BH + BL  (5-bit, max 30)             [KSA_8]
+//    Z1_raw = sA × sB  ? computed by LEVEL 2 below (10-bit, max 900)
+//    Z1     = Z1_raw ? Z2 ? Z0                     [KSA_16 subtracts]
+//    P      = (Z2 << 8) + (Z1 << 4) + Z0           [KSA_16 additions]
+//
+//  LEVEL 2  (5-bit sA/sB split into 3-bit high + 2-bit low)
+//  ----------------------------------------------------------
+//    sAH = sA[4:2]  (3-bit),  sAL = sA[1:0]  (2-bit)
+//    sBH = sB[4:2]  (3-bit),  sBL = sB[1:0]  (2-bit)
+//
+//    Zz0     = sAL × sBL                           [karatsuba_2bit ? 4b]
+//    Zz2     = sAH × sBH  (3b×3b, max 49)          [karatsuba_4bit, upper zero-padded ? 8b]
+//    ssA     = sAH + sAL  (4-bit, max 10)          [KSA_8]
+//    ssB     = sBH + sBL  (4-bit, max 10)          [KSA_8]
+//    Zz1_raw = ssA × ssB  (4b×4b, max 100)         [karatsuba_4bit ? 8b]
+//    Zz1     = Zz1_raw ? Zz2 ? Zz0                 [KSA_8 subtracts]
+//    Z1_raw  = (Zz2 << 4) + (Zz1 << 2) + Zz0      [KSA_16 additions ? 10b]
+// ============================================================
+
+module karatsuba_8bit (
+    input  wire [7:0]  A,
+    input  wire [7:0]  B,
+    output wire [15:0] P
+);
+
+    // ----------------------------------------------------------
+    // LEVEL 1 ? split
+    // ----------------------------------------------------------
+    wire [3:0] AH = A[7:4];
+    wire [3:0] AL = A[3:0];
+    wire [3:0] BH = B[7:4];
+    wire [3:0] BL = B[3:0];
+
+    // Z0 = AL × BL,   Z2 = AH × BH
+    wire [7:0] Z0, Z2;
+    karatsuba_4x4_struct u_Z0 (.A(AL), .B(BL), .P(Z0));
+    karatsuba_4x4_struct u_Z2 (.A(AH), .B(BH), .P(Z2));
+
+    // sA = AH + AL,   sB = BH + BL   (results are 5-bit)
+    wire [7:0] sA_8, sB_8;
+    wire       sA_c,  sB_c;
+
+    mod_KS8 u_sA ({4'b0,AH}, {4'b0,AL}, 1'b0, sA_8, sA_c);
+    mod_KS8 u_sB ({4'b0,BH}, {4'b0,BL}, 1'b0, sB_8, sB_c);
+
+    wire [4:0] sA = sA_8[4:0];
+    wire [4:0] sB = sB_8[4:0];
+
+    // ----------------------------------------------------------
+    // LEVEL 2 ? compute Z1_raw = sA × sB via Karatsuba
+    //   Split sA/sB: high = [4:2] (3-bit), low = [1:0] (2-bit)
+    // ----------------------------------------------------------
+    wire [2:0] sAH = sA[4:2];
+    wire [1:0] sAL = sA[1:0];
+    wire [2:0] sBH = sB[4:2];
+    wire [1:0] sBL = sB[1:0];
+
+    // Zz0 = sAL × sBL   (2b × 2b ? 4b)
+    wire [3:0] Zz0;
+    karatsuba_2x2_struct u_Zz0 (sAL, sBL, Zz0);
+
+    // Zz2 = sAH × sBH   (3b × 3b ? 6b max, use karatsuba_4bit zero-padded)
+    wire [7:0] Zz2_8;
+    karatsuba_4x4_struct u_Zz2 ({1'b0,sAH}, {1'b0,sBH}, Zz2_8);
+    wire [5:0] Zz2 = Zz2_8[5:0];   // bits [7:6] always 0 since max 49 fits in 6 bits
+
+    //middle term : Zz1 calculation
+    // ssA = sAH + sAL  (3-bit + 2-bit ? 4-bit, max 10)
+    wire [3:0] ssA, ssB;    
+    wire       ssA_c, ssB_c;
+
+    KS4 u_ssA ({1'b0, sAH}, {2'b0, sAL}, 1'b0, ssA, ssA_c);
+    KS4 u_ssB ({1'b0, sBH}, {2'b0, sBL}, 1'b0, ssB, ssB_c);
+
+    // Zz1_raw = ssA × ssB   (4b × 4b ? 8b, max 100)
+    wire [7:0] Zz1_raw;
+    karatsuba_4x4_struct u_Zz1r (ssA, ssB, Zz1_raw);
+
+    // Zz1 = Zz1_raw ? Zz2 ? Zz0   (always non-negative, fits in 8b)
+    wire [7:0] Zz1_mid, Zz1;
+    wire       Zz1_c1,  Zz1_c2;
+    wire [7:0] Zz2_inv,Zz0_inv;  // 2's complement of Zz2 and Zz0
+
+    not u_inv_Zz2[7:0] (Zz2_inv, {2'b0, Zz2});
+    not u_inv_Zz0[7:0] (Zz0_inv, {4'b0, Zz0});
+
+    mod_KS8 u_Zz1a (
+        Zz1_raw,
+        Zz2_inv,    // 1's complement of Zz2
+        1'b1,       // Adding 1 for 2's complement
+        Zz1_mid,
+        Zz1_c1
+    );
+    mod_KS8 u_Zz1b (
+        Zz1_mid,
+        Zz0_inv,    // 1's complement of Zz0
+        1'b1,       // Adding 1 for 2's complement
+        Zz1,
+        Zz1_c2
+    );
+
+    // ----------------------------------------------------------
+    // LEVEL 2 ? assemble Z1_raw = (Zz2<<4) + (Zz1<<2) + Zz0
+    //   Max value: 49<<4 + 81<<2 + 9 = 784 + 324 + 9 = 1117? No ?
+    //   max sA=sB=30: Z1_raw=900, Zz2=49<<4=784, Zz0=9, Zz1=900-784-9=107<<2 ... 
+    //   wait: 784+107*4+9 = 784+428+9 = 1221? That can't equal 900.
+    //   Re-check: Zz2<<4 adds 6-bit Zz2 shifted 4 ? occupies bits[9:4]
+    //             Zz1<<2 adds 8-bit Zz1 shifted 2 ? occupies bits[9:2]
+    //             Zz0    is 4-bit              ? occupies bits[3:0]
+    //   All fit in 10 bits (max Z1_raw = 30*30 = 900 < 1024).
+    // ------------------------------------------------------------
+
+    wire [15:0] t_Zz2  = {10'b0, Zz2} << 4;         // bits[9:4]
+    wire [15:0] t_Zz1  = {8'b0,  Zz1} << 2;         // bits[9:2]
+    wire [15:0] t_Zz0  = {12'b0, Zz0};              // bits[3:0]
+
+
+    wire [15:0] zraw_s1;
+    wire        zraw_c1, zraw_c2;
+    KS16 u_zraw1 (.A(t_Zz2),  .B(t_Zz1), .Cin(1'b0), .S(zraw_s1), .Cout(zraw_c1));
+
+    wire [15:0] Z1_raw_16;
+    KS16 u_zraw2 (.A(zraw_s1), .B(t_Zz0), .Cin(1'b0), .S(Z1_raw_16), .Cout(zraw_c2));
+    wire [9:0] Z1_raw = Z1_raw_16[9:0];
+
+    // ----------------------------------------------------------
+    // LEVEL 1 ? Z1 = Z1_raw ? Z2 ? Z0   (10-bit, always ? 0)
+    // ----------------------------------------------------------
+    wire [15:0] Z1_mid_16, Z1_16;
+    wire        z1_c1, z1_c2;
+    KS16 u_z1a (
+        .A   ({6'b0, Z1_raw}),
+        .B   (~{8'b0, Z2} + 16'd1),    // 2's complement of Z2
+        .Cin (1'b0),
+        .S   (Z1_mid_16),
+        .Cout(z1_c1)
+    );
+    KS16 u_z1b (
+        .A   (Z1_mid_16),
+        .B   (~{8'b0, Z0} + 16'd1),    // 2's complement of Z0
+        .Cin (1'b0),
+        .S   (Z1_16),
+        .Cout(z1_c2)
+    );
+    wire [9:0] Z1 = Z1_16[9:0];
+
+    // ----------------------------------------------------------
+    // LEVEL 1 ? P = (Z2<<8) + (Z1<<4) + Z0
+    //   Z2<<8  ? bits [15:8]  (8-bit value)
+    //   Z1<<4  ? bits [13:4]  (10-bit value shifted 4, lands in [13:4])
+    //   Z0     ? bits  [7:0]  (8-bit value)
+    //   All fit in 16 bits.
+    // ----------------------------------------------------------
+    wire [15:0] t_Z2 = {Z2,       8'b0};
+    wire [15:0] t_Z1 = {2'b0, Z1, 4'b0};
+    wire [15:0] t_Z0 = {8'b0, Z0};
+
+    wire [15:0] p_sum1;
+    wire        p_c1, p_c2;
+    KS16 u_p1 (.A(t_Z2),   .B(t_Z1), .Cin(1'b0), .S(p_sum1), .Cout(p_c1));
+    KS16 u_p2 (.A(p_sum1), .B(t_Z0), .Cin(1'b0), .S(P),      .Cout(p_c2));
+
+endmodule

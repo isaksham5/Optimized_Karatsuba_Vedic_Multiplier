@@ -1,0 +1,32 @@
+module Vedic_4x4(
+input [3:0] x,y,
+output [7:0] prod
+);
+wire[3:0] p0,p1,p2,p3;
+
+vedic_2x2 v1(x[1:0],y[1:0],p0);
+vedic_2x2 v2(x[1:0],y[3:2],p1);
+vedic_2x2 v3(x[3:2],y[1:0],p2);
+vedic_2x2 v4(x[3:2],y[3:2],p3);
+
+assign prod[1:0] = p0[1:0];
+
+//$display("%p3=b p2=%b p1=%b p0=%b",p3,p2,p1,p0);
+wire [3:0] s1, s2;
+wire c1, c2, cout;
+
+KS4 a0(p1,p2,1'b0,s1,c1);
+//$display("s1=%b c1=%b",s1,c1);
+
+KS4 a1(s1,{2'b00,p0[3:2]},1'b0,s2,c2);
+assign prod[3:2] = s2[1:0];
+//$display("s2=%b c2=%b",s2,c2);
+
+wire s,c;
+
+HA HA1(c1,c2,s,c);
+
+KS4 a2(p3, {c,s,s2[3:2]}, 1'b0, prod[7:4], cout);
+//$display("{s2[3:2],c1,c2}=%b ",{s2[3:2],c1,c2});
+
+endmodule

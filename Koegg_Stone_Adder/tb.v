@@ -1,0 +1,28 @@
+
+module tb;
+
+reg [3:0] x, y;
+reg cin;
+wire [3:0] sum;
+wire cout;
+
+
+KS4_1 uut(x, y, cin, sum, cout);
+
+initial begin
+    repeat (10) begin
+        x = $random % 16;
+        y = $random % 16;
+	cin=$random %2;
+        #1;
+
+        if ({cout, sum} !== (x + y + cin ))
+            $display("? ERROR: x=%b y=%b -> got=%b expected=%b",
+                      x, y, {cout,sum}, x+y+cin);
+        else
+            $display("? PASS: %b + %b + %b = %b",
+                      x, y, cin, {cout,sum});
+    end
+end
+
+endmodule

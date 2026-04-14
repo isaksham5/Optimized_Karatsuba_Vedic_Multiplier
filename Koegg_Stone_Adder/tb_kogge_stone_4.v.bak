@@ -1,0 +1,75 @@
+`timescale 1ns/1ps
+
+module tb_kogge_stone_4;
+
+reg [3:0] x, y;
+reg clk;
+wire [3:0] sum;
+wire cout;
+
+// Instantiate your module
+Kogge_Stone_4 dut (
+    .x(x),
+    .y(y),
+    .clk(clk),
+    .sum(sum),
+    .cout(cout)
+);
+
+// Clock generation
+always #5 clk = ~clk;
+
+// Pipeline tracking (VERY IMPORTANT)
+reg [4:0] expected [0:10];  // stores expected outputs
+integer i;
+
+initial begin
+    clk = 0;
+    x = 0;
+    y = 0;
+
+    // Initialize expected array
+    for (i = 0; i < 10; i = i + 1)
+        expected[i] = 0;
+
+    // Apply test vectors
+    #10;
+
+    for (i = 0; i < 10; i = i + 1) begin
+        @(posedge clk);
+
+        x   = $random % 16;
+        y   = $random % 16;
+
+        expected[i] = x + y ;
+    end
+
+    // Wait for pipeline to flush
+    repeat(5) @(posedge clk);
+
+    $finish;
+end
+
+// Check outputs with delay (3-cycle latency)
+integer j;
+initial begin
+    j = 0;
+    #30;  // wait for pipeline to fill
+
+    forever begin
+        @(posedge clk);
+
+        if (j >= 3 && j < 10) begin
+            if ({cout, sum} !== expected[j-3]) begin
+                $display("? ERROR at cycle %0d: x=%b y=%b -> got=%b expected=%b",
+                         j, x, y, {cout, sum}, expected[j-3]);
+            end else begin
+                $display("? PASS at cycle %0d: result=%b", j, {cout, sum});
+            end
+        end
+
+        j = j + 1;
+    end
+end
+
+endmodule

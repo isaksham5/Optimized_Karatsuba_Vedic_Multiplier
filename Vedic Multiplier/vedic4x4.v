@@ -1,0 +1,45 @@
+module vedic_multiplier_4bit (
+input  [3:0] A,
+input  [3:0] B,
+output [7:0] P
+);
+// Sub-products
+wire [3:0] Q0, Q1, Q2, Q3;
+
+vedic_2x2 M0 (.A(A[1:0]), .B(B[1:0]), .P(Q0)); // AL*BL
+vedic_2x2 M1 (.A(A[1:0]), .B(B[3:2]), .P(Q1)); // AL*BH
+vedic_2x2 M2 (.A(A[3:2]), .B(B[1:0]), .P(Q2)); // AH*BL
+vedic_2x2 M3 (.A(A[3:2]), .B(B[3:2]), .P(Q3)); // AH*BH
+
+assign P[0] = Q0[0];
+assign P[1] = Q0[1];
+
+// Weight-2
+wire s20, c20, s21, c21;
+full_adder FA_w2 (.A(Q0[2]), .B(Q1[0]), .Cin(Q2[0]), .Sum(s20), .Cout(c20));
+half_adder HA_w2 (.A(Q0[3]), .B(s20), .Sum(s21), .Cout(c21));
+assign P[2] = s21;
+
+// Weight-3
+wire s30, c30, s31, c31;
+full_adder FA_w3a (.A(Q1[1]), .B(Q2[1]), .Cin(Q3[0]), .Sum(s30), .Cout(c30));
+full_adder FA_w3b (.A(s30), .B(c20), .Cin(c21), .Sum(s31), .Cout(c31));
+assign P[3] = s31;
+
+// Weight-4
+wire s40, c40, s41, c41;
+full_adder FA_w4a (.A(Q1[2]), .B(Q2[2]), .Cin(Q3[1]), .Sum(s40), .Cout(c40));
+full_adder FA_w4b (.A(s40), .B(c30), .Cin(c31), .Sum(s41), .Cout(c41));
+assign P[4] = s41;
+
+// Weight-5
+wire s50, c50, s51, c51;
+full_adder FA_w5a (.A(Q1[3]), .B(Q2[3]), .Cin(Q3[2]), .Sum(s50), .Cout(c50));
+full_adder FA_w5b (.A(s50), .B(c40), .Cin(c41), .Sum(s51), .Cout(c51));
+
+assign P[5] = s51;
+
+// Weight-6
+full_adder FA_w6 (.A(Q3[3]), .B(c50), .Cin(c51), .Sum(P[6]), .Cout(P[7]));
+
+endmodule
