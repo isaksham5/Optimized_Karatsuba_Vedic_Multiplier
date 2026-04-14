@@ -1,0 +1,642 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+vblack_cell
+Z0 !s110 1776124305
+!i10b 1
+!s100 kDgAeQFl=I^f8i0OoTlHj0
+IRam9[A=EamjSKLK?8X21o1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier
+w1774770192
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/black_cell.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/black_cell.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1776124305.000000
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/black_cell.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/black_cell.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vFA
+R0
+!i10b 1
+!s100 <ZeM0W^FPbKnnPi=W@Tb82
+INUz@5UhIP5D[ZXRMHK=g;0
+R1
+R2
+w1774863046
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/FA.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/FA.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/FA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/FA.v|
+!i113 1
+R5
+R6
+n@f@a
+vfull_adder
+Z7 !s110 1776124307
+!i10b 1
+!s100 3m1X92M<b2=0_c]HV7g]H3
+I71GYB@9QANL4HIhFn6@Y80
+R1
+R2
+Z8 w1774816580
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/full_adder.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/full_adder.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1776124307.000000
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/full_adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/full_adder.v|
+!i113 1
+R5
+R6
+vgrey_cell
+R0
+!i10b 1
+!s100 3h3B1TiNaCKY6[fI3LYKf3
+Iz`DLAWh?U7k<>862^^N8I2
+R1
+R2
+w1774770194
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/grey_cell.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/grey_cell.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/grey_cell.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/grey_cell.v|
+!i113 1
+R5
+R6
+vHA
+R0
+!i10b 1
+!s100 M>i[F<9_WEC7dWmeRUaa33
+Ia46E9?37H;MaM1_m@2@M32
+R1
+R2
+w1774865299
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/HA.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/HA.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/HA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/HA.v|
+!i113 1
+R5
+R6
+n@h@a
+vhalf_adder
+R7
+!i10b 1
+!s100 Hh[XjP]aEc9b92:zTJPhb2
+IEmXR;]`WkzA8gZ_d3OiVP3
+R1
+R2
+R8
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/half_adder.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/half_adder.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/half_adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/half_adder.v|
+!i113 1
+R5
+R6
+vinitialize
+R0
+!i10b 1
+!s100 SoiZb5QJY<N1RL_2O_9<n3
+IDmegM^:gDdSW32e4khiCZ2
+R1
+R2
+w1774782798
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/initialize.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/initialize.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/initialize.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/initialize.v|
+!i113 1
+R5
+R6
+vKS128
+Z10 !s110 1776124306
+!i10b 1
+!s100 lR[l01DSPgjDBS[oWFfX02
+IcB6BLj9h2UWUi??>98U=11
+R1
+R2
+w1776122165
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS128.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS128.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z11 !s108 1776124306.000000
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS128.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS128.v|
+!i113 1
+R5
+R6
+n@k@s128
+vKS16
+R0
+!i10b 1
+!s100 PnHMWo1D@600dA7=J;zDN0
+Ii63;X:D:R4anK^@egAH]I0
+R1
+R2
+w1776100622
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS16.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS16.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS16.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS16.v|
+!i113 1
+R5
+R6
+n@k@s16
+vKS32
+R0
+!i10b 1
+!s100 L@E_;b7HISSVfEQ[nDkLf0
+I]jX39=QXF>fI7ba4^2lGP2
+R1
+R2
+w1776116945
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS_32.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS_32.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS_32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS_32.v|
+!i113 1
+R5
+R6
+n@k@s32
+vKS4
+R0
+!i10b 1
+!s100 Q0?QDdgK?5lO0NWni[C9N1
+I5AaS9KdJLA<E8BbHl@<Z`2
+R1
+R2
+w1776102176
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS4.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS4.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS4.v|
+!i113 1
+R5
+R6
+n@k@s4
+vKS64
+R0
+!i10b 1
+!s100 4HRAD5b6P=QSQznXGcETa3
+IKLRQA@RWZgnC:L7T=S2kR0
+R1
+R2
+w1776115186
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS64.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS64.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS64.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS64.v|
+!i113 1
+R5
+R6
+n@k@s64
+vKS8
+R7
+!i10b 1
+!s100 Y]Q__P^W0;kf:ZzD8CIFS1
+ID`I_T;3LVX5O18QLS;04:0
+R1
+R2
+w1776123382
+8S:\VLSI\32bit_Optimized_Vedic_Multiplier\Advanced Vedic Multiplier\KS8.v
+FS:\VLSI\32bit_Optimized_Vedic_Multiplier\Advanced Vedic Multiplier\KS8.v
+L0 2
+R3
+r1
+!s85 0
+31
+R9
+!s107 S:\VLSI\32bit_Optimized_Vedic_Multiplier\Advanced Vedic Multiplier\KS8.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:\VLSI\32bit_Optimized_Vedic_Multiplier\Advanced Vedic Multiplier\KS8.v|
+!i113 1
+R5
+R6
+n@k@s8
+vtb_KS4
+R0
+!i10b 1
+!s100 21n8UI7El5IK8F?`LSWRe3
+I]oMS=TSQ@`BfNFg:GadoA3
+R1
+R2
+w1776119212
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS4_tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS4_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS4_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS4_tb.v|
+!i113 1
+R5
+R6
+ntb_@k@s4
+vtb_KS64
+R10
+!i10b 1
+!s100 DEe1]zIEl]@zb^lUPlJfU0
+I`UkDl=B8<moS7F_eKihl72
+R1
+R2
+w1776117499
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS64_tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS64_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS64_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/KS64_tb.v|
+!i113 1
+R5
+R6
+ntb_@k@s64
+vtb_VM128
+R0
+!i10b 1
+!s100 f`mnN9KaEM<@XLg<XTbaZ0
+I3=LZ_Hfg1bVlMg<CM[JEK3
+R1
+R2
+w1776124300
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM128_tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM128_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM128_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM128_tb.v|
+!i113 1
+R5
+R6
+ntb_@v@m128
+vtb_VM16
+R10
+!i10b 1
+!s100 WiPYYGMGbcU[<VE8lRS5G1
+IB1h0@8FnoeMLBMol<K8HE3
+R1
+R2
+w1776121560
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM16_tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM16_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM16_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM16_tb.v|
+!i113 1
+R5
+R6
+ntb_@v@m16
+vtb_VM32
+R10
+!i10b 1
+!s100 :REZN6=VdJaH8olD1P]5_1
+IQX6_@Be@ekWk7IP_LkANX0
+R1
+R2
+w1776121332
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM32_tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM32_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM32_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM32_tb.v|
+!i113 1
+R5
+R6
+ntb_@v@m32
+vtb_VM4
+R10
+!i10b 1
+!s100 jd7^e@PnSzK0nMKIaD3XC0
+IcAmeI:2n56LIAfP_hV]QC0
+R1
+R2
+w1776120573
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM4_tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM4_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM4_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM4_tb.v|
+!i113 1
+R5
+R6
+ntb_@v@m4
+vtb_VM64
+R7
+!i10b 1
+!s100 5OQE?=nALC^PAFY0HFAB`3
+IEF6Hk=?_0>L7DTR`3d_]51
+R1
+R2
+w1776121245
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM64_tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM64_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM64_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM64_tb.v|
+!i113 1
+R5
+R6
+ntb_@v@m64
+vtb_VM8
+R10
+!i10b 1
+!s100 [TRXeNznKnHZH:KfS9<6o1
+IYhRQ8iDbn?MZ88Wklho[l3
+R1
+R2
+w1776120999
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM8_tb.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM8_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM8_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/VM8_tb.v|
+!i113 1
+R5
+R6
+ntb_@v@m8
+vvedic_2x2
+!s110 1776123444
+!i10b 1
+!s100 dBjC=MDT`ae?nEZ0]`ASN2
+I:k7hE3d^VXg2zg08QPRJN1
+R1
+R2
+w1776110132
+Z12 8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_2x2.v
+Z13 FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_2x2.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1776123444.000000
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_2x2.v|
+Z14 !s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_2x2.v|
+!i113 1
+R5
+R6
+vVM128
+R10
+!i10b 1
+!s100 n7`Ha47P=c=K<dF1fCdjB1
+I@QbH4[n[;Da:1CR5]Ri]:0
+R1
+R2
+w1776122067
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_128x128.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_128x128.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_128x128.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_128x128.v|
+!i113 1
+R5
+R6
+n@v@m128
+vVM16
+R10
+!i10b 1
+!s100 l`?MVUG=4Zg2M>2Z2R?5U3
+I02]De4ZG12QPGzBz^_9fn3
+R1
+R2
+w1776120959
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_16x16.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_16x16.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_16x16.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_16x16.v|
+!i113 1
+R5
+R6
+n@v@m16
+vVM2
+R7
+!i10b 1
+!s100 6BVP]9Z8M8E1mY^LBonNm3
+IQ_`K[XJ9KfP95Wi[7Cg7=0
+R1
+R2
+w1776123476
+R12
+R13
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_2x2.v|
+R14
+!i113 1
+R5
+R6
+n@v@m2
+vVM32
+R10
+!i10b 1
+!s100 H@cOLK[n821UJ]@n]J6Tb0
+IPcdEROF0W^=96YSZhOXZ82
+R1
+R2
+w1776117906
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_32x32.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_32x32.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_32x32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_32x32.v|
+!i113 1
+R5
+R6
+n@v@m32
+vVM4
+R10
+!i10b 1
+!s100 Y`zX0jDgW@R9]:FECGSUQ3
+I<^^3=o1dfbNaSMHEnCoTj2
+R1
+R2
+w1776123489
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_4x4.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_4x4.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_4x4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_4x4.v|
+!i113 1
+R5
+R6
+n@v@m4
+vVM64
+R10
+!i10b 1
+!s100 B3A8^_I_A@0gikiPjLH;00
+InW^Azg:M@S2[^l_m3SD6]3
+R1
+R2
+w1776121154
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_64x64.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_64x64.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_64x64.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_64x64.v|
+!i113 1
+R5
+R6
+n@v@m64
+vVM8
+R10
+!i10b 1
+!s100 Q1P`0QeET[Z;>4D@AaTI30
+I:Ln8R6MTeaNHJPLD7>hEL1
+R1
+R2
+w1776120905
+8S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_8x8.v
+FS:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_8x8.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_8x8.v|
+!s90 -reportprogress|300|-work|work|-stats=none|S:/VLSI/32bit_Optimized_Vedic_Multiplier/Advanced Vedic Multiplier/Vedic_8x8.v|
+!i113 1
+R5
+R6
+n@v@m8
