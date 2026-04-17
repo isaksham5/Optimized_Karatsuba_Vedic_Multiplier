@@ -1,0 +1,32 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[21:28:57.499146] Configured Lic search path (21.01-s002): 5280@10.110.5.59:1717@10.10.2.131
+
+Version: 21.14-s082_1, built Thu Jun 23 02:02:08 PDT 2022
+Options: -files run4.tcl 
+Date:    Fri Apr 17 21:28:57 2026
+Host:    cadence-server.vit.ac.in (x86_64 w/Linux 4.18.0-477.21.1.el8_8.x86_64) (16cores*32cpus*1physical cpu*Intel(R) Xeon(R) Gold 6346 CPU @ 3.10GHz 36864KB) (1055760632KB)
+PID:     71155
+OS:      Red Hat Enterprise Linux release 8.8 (Ootpa)
+
+Checkout succeeded: Genus_Synthesis/2F3C73E62C32376C338B
+	License file: 5280@10.110.5.59
+	License Server: 5280@10.110.5.59
+
+[21:28:57.190841] Periodic Lic check successful
+[21:28:57.190851] Feature usage summary:
+[21:28:57.190851] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+XIO:  fatal IO error 0 (Success) on X server "localhost:13.0"
+      after 442 requests (442 known processed) with 0 events remaining.

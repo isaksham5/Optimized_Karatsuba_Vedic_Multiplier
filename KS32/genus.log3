@@ -1,0 +1,75 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[22:21:00.499002] Configured Lic search path (21.01-s002): 5280@10.110.5.59:1717@10.10.2.131
+
+Version: 21.14-s082_1, built Thu Jun 23 02:02:08 PDT 2022
+Options: -files run2.tcl 
+Date:    Mon Apr 13 22:21:00 2026
+Host:    cadence-server.vit.ac.in (x86_64 w/Linux 4.18.0-477.21.1.el8_8.x86_64) (16cores*32cpus*1physical cpu*Intel(R) Xeon(R) Gold 6346 CPU @ 3.10GHz 36864KB) (1055760632KB)
+PID:     290164
+OS:      Red Hat Enterprise Linux release 8.8 (Ootpa)
+
+Checkout succeeded: Genus_Synthesis/2F3C73E62C32376C338B
+	License file: 5280@10.110.5.59
+	License Server: 5280@10.110.5.59
+
+[22:21:00.060587] Periodic Lic check successful
+[22:21:00.060593] Feature usage summary:
+[22:21:00.060593] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (75 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source run2.tcl
+#@ Begin verbose source ./run2.tcl
+@file(run2.tcl) 2: set_db use_scan_seqs_for_non_dft false
+  Setting attribute of root '/': 'use_scan_seqs_for_non_dft' = false
+@file(run2.tcl) 3: set_db init_lib_search_path /home/cadence/install/FOUNDRY/digital/90nm/dig/lib/
+  Setting attribute of root '/': 'init_lib_search_path' = /home/cadence/install/FOUNDRY/digital/90nm/dig/lib/
+@file(run2.tcl) 4: set_db init_hdl_search_path /home/userdata/25bvd0079/KS16
+  Setting attribute of root '/': 'init_hdl_search_path' = /home/userdata/25bvd0079/KS16
+@file(run2.tcl) 5: read_libs slow.lib
+
+Threads Configured:3
+
+  Message Summary for Library slow.lib:
+  *************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  Missing library level attribute. [LBR-516]: 1
+  *************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+@file(run2.tcl) 6: read_hdl ./CLA32.v
+@file(run2.tcl) 7: elaborate CLA32
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Error   : Could not find an HDL design. [CDFG-210] [elaborate]
+        : The design is 'CLA32'.
+        : This error may happen if you read a set of files, and you try to elaborate a design which description is not part of the files read. To fix this, check the name of the design you want to elaborate, or check if you have read all the expected RTL files.
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+#@ End verbose source ./run2.tcl
+1
+Encountered problems processing file: run2.tcl
+WARNING: This version of the tool is 1390 days old.
+@genus:root: 2> nano CLA32.v
+@genus:root: 3> quit
+
+Lic Summary:
+[22:23:35.146433] Cdslmd servers: cadence-server
+[22:23:35.146441] Feature usage summary:
+[22:23:35.146441] Genus_Synthesis
+
+Normal exit.
